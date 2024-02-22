@@ -32,7 +32,7 @@ export class LeadsService {
 
   static async getAllLeadsWithDelay() {
     const limit = 5
-    const ms = 20000
+    const ms = 2000
 
     try {
       loader.show()
