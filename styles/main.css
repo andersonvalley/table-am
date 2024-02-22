@@ -1,0 +1,113 @@
+#app {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(255, 230, 255);
+}
+
+.container {
+  border-radius: 10px;
+  background-color: #fff;
+  box-shadow: 0 0 20px 0 #5b5b5b66;
+  padding: 10px 20px;
+}
+
+.loader {
+  position: absolute;
+  inset: 0;
+  display: none;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(27, 27, 27, 0.353);
+}
+
+.loader.show {
+  display: flex;
+}
+
+.error {
+  display: none;
+}
+
+.error.show {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.no-content {
+  display: none;
+}
+
+.no-content p {
+  margin: 0;
+}
+
+.no-content.show {
+  display: flex;
+}
+
+.pag {
+  display: none;
+}
+
+.pag.show {
+  display: flex;
+  justify-content: center;
+}
+
+.controls {
+  display: flex;
+  justify-content: flex-end;
+  gap: 20px;
+  margin-bottom: 20px;
+}
+
+.controls__item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.controls__item-title {
+  white-space: nowrap;
+}
+
+.page-item.active {
+  pointer-events: all;
+}
+
+.page-item {
+  pointer-events: none;
+}
+
+.table__body tr {
+  animation: opacity 300ms ease-in-out;
+}
+
+@keyframes opacity {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media (max-width: 555px) {
+  .controls {
+    flex-direction: column;
+  }
+
+  .table {
+    display: block;
+    overflow: scroll;
+  }
+
+  .table {
+    font-size: 14px;
+  }
+}
